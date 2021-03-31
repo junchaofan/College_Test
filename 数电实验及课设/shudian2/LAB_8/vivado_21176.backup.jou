@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 19 16:13:18 2018
+# Process ID: 1844
+# Log file: C:/Users/Administrator/Desktop/shudian2/LAB_8/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/shudian2/LAB_8\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/shudian2/LAB_8/LAB_8.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+source lab8tb.tcl
+close_sim

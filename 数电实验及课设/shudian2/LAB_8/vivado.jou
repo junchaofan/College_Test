@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Jun 21 22:09:19 2018
+# Process ID: 21176
+# Log file: E:/shudian2/LAB_8/vivado.log
+# Journal file: E:/shudian2/LAB_8\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/shudian2/LAB_8/LAB_8.xpr
+synth_design -rtl -name rtl_1
+launch_simulation
+source lab8tb.tcl
+close_sim
+close_project
+open_project E:/shudian2/LAB_4/LAB_4.xpr
+launch_simulation
+source lab4tb.tcl
+close_sim

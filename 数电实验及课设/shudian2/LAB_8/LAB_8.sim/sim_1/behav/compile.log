@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/shudian2/lab7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab7
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/shudian2/lab8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab8
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/shudian2/lab8tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab8tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/shudian2/LAB_8/LAB_8.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

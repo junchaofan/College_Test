@@ -1,0 +1,50 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2018/06/07 08:41:49
+// Design Name: 
+// Module Name: test
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module test();
+reg clk,rst,start;
+wire [31:0]sum;
+
+main dut(
+	.clk(clk),
+	.rst(rst),
+	.start(start),
+	.sum(sum)
+);
+
+initial begin
+  clk = 1'b0;
+  rst = 1'b1;
+  start=1'b1;
+  #20;
+  rst=1'b0;
+end
+
+always begin
+  #20 clk=~clk;
+end
+always begin
+   #200 start=0;
+end
+
+
+endmodule

@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../../大三数电课设/add.v"
+verilog xil_defaultlib  "../../../../大三数电课设/show.v"
+verilog xil_defaultlib  "../../../../大三数电课设/divider.v"
+verilog xil_defaultlib  "../../../../大三数电课设/main.v"
+verilog xil_defaultlib  "../../../../大三数电课设/maintb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,155 @@
+//主模块
+module datapath(Clk,reset,SUM_SEL,NEXT_SEL,A_SEL,LD_SUM,LD_NEXT,NEXT_ZERO,outSUM);
+parameter WIDTH=8;
+ input SUM_SEL,NEXT_SEL,A_SEL,LD_SUM,LD_NEXT,Clk,rst;
+ wire [WIDTH-1:0] inSUM_SEL00,inSUM_SEL01,outSUM_SEL,inNEXT_SEL00,inNEXT_SEL01,outNEXT_SEL;
+ wire [WIDTH-1:0] outSUM_SEL,outNEXT_SEL,outA_SEL,outNEXT,outA1,outA2,outMEM;
+ output [WIDTH-1:0] outSUM;
+ output NEXT_ZERO;
+ mux #(WIDTH) SUM_SEL(SUM_SEL,inSUM_SEL00,inSUM_SEL01,outSUM_SEL);
+ mux #(WIDTH) NEXT_SEL(NEXT_SEL,inNEXT_SEL00,inNEXT_SEL01,outNEXT_SEL);
+ mux #(WIDTH) A_SEL(A_SEL,inA_SEL00,inA_SEL01,outA_SEL);
+ register #(WIDTH) SUM(inSUM,Clk,reset,LD_SUM,outSUM);
+ register #(WIDTH) NEXT(inNEXT,Clk,reset,LD_NEXT,outNEXT);
+ add #(WIDTH) A1(inA10,inA11,outA1);
+ add #(WIDTH) A2(inA20,inA21,outA2);
+ ROM #(WIDTH,WIDTH) MEM(outMEM,inMEM);
+ COM #(WIDTH) COM(inCOM0,inCOM1,NEXT_ZERO);
+ assign inA10=outSUM;
+ assign inA11=outMEM;
+ assign inNEXT_SEL00=outMEM;
+ assign inNEXT_SEL01=0;
+ assign inSUM_SEL00=outA1;
+ assign inSUM_SEL01=0;
+ assign inSUM=outSUM_SEL;
+ assign inNEXT=outNEXT_SEL;
+ assign inA20=outNEXT;
+ assign inA21=1;
+ assign inA_SEL00=outNEXT;
+ assign inA_SEL01=outA2;
+ assign inMEM=outA_SEL;
+ assign inCOM0=outNEXT_SEL;
+ assign inCOM1=0; 
+endmodule
+
+module COM(a,b,out);
+ parameter WIDTH=8;
+ input [WIDTH-1:0] a,b;
+ output out;
+ reg out;
+ always @(a or b)
+  begin
+  if(a>b)
+  out=1;
+  else out=0;
+  end
+endmodule
+
+//存储器模块
+module ROM(ROM_data, ROM_addr);
+parameter data_WIDTH=8;
+parameter addr_WIDTH=8;
+output [addr_WIDTH-1:0] ROM_data;
+input [addr_WIDTH-1:0] ROM_addr;
+reg [addr_WIDTH-1:0] ROM [data_WIDTH-1:0]; // defining 4x2 ROM
+assign ROM_data = ROM[ROM_addr]; // reading ROM content at the address ROM_addr
+initial begin
+ROM[0]=8'h00000003;
+ROM[1]=8'h00000002;
+ROM[2]=8'h00000000;
+ROM[3]=8'h00000007;
+ROM[4]=8'h00000004;
+ROM[5]=8'h00000000;
+ROM[6]=8'h00000000;
+ROM[7]=8'h0000000b;
+ROM[8]=8'h00000006;
+ROM[9]=8'h00000000;
+ROM[10]=8'h00000000;
+ROM[11]=8'h00000000;
+ROM[12]=8'h00000008;
+ROM[13]=8'h00000000;
+ROM[14]=8'h00000000;
+ROM[15]=8'h00000000;
+end
+endmodule
+
+//寄存器模块
+module register(D,Clk,reset,load,Q);
+  parameter WIDTH=8;
+  input [WIDTH-1:0] D;
+  input Clk,reset,load;
+  output reg [WIDTH-1:0] Q;
+always @(posedge Clk)
+if (reset)
+begin
+Q <= 8'b0;
+end else if (load)
+begin
+Q <= D;
+end
+endmodule
+
+//加法器模块
+module add(A,B,C);
+  parameter WIDTH=8;
+  input  [WIDTH-1:0] A, B;
+  output [WIDTH-1:0] C;
+  wire  [WIDTH:0] DATA;
+  assign DATA=A+B;
+  assign C=DATA[7:0];
+endmodule
+
+//二路选择器模块
+module mux(s,x,y,m);
+  parameter WIDTH=8;
+  input [WIDTH-1:0] x,y;
+  input s;
+  output [WIDTH-1:0] m;
+assign m =(s?y:x);
+endmodule
+
+module fsm(clk,rst,start,next_zero,LD_SUM,LD_NEXT,SUM_SEL,NEXT_SEL,A_SEL,DONE);
+input clk,rst,start,next_zero;
+output reg LD_SUM,LD_NEXT,SUM_SEL,NEXT_SEL,A_SEL,DONE;
+parameter ST0=0,ST1=1,ST2=2,ST3=3;
+reg [0:1] moore_state;
+always @ (negedge clk)
+begin
+	if(rst) moore_state<=ST0;
+	else
+	case(moore_state)
+	ST0:
+		begin
+		{LD_SUM,LD_NEXT,SUM_SEL,NEXT_SEL,A_SEL,DONE}<={0,0,0,0,0,0};
+		moore_state<=start?ST2:ST0;
+		end
+	ST1:
+		begin
+		{LD_SUM,LD_NEXT,SUM_SEL,NEXT_SEL,A_SEL,DONE}<={0,0,0,0,0,1};
+		moore_state<=start?ST1:ST0;
+		end
+	ST2:
+		begin
+		{LD_SUM,LD_NEXT,SUM_SEL,NEXT_SEL,A_SEL,DONE}<={1,0,1,1,1,0};
+		moore_state<=ST3;
+		end
+	ST3:
+		begin
+		{LD_SUM,LD_NEXT,SUM_SEL,NEXT_SEL,A_SEL,DONE}<={0,1,1,1,0,0};
+		moore_state<=next_zero?ST1:ST2;
+		end
+	endcase
+end
+endmodule
+
+module main(clk,rst,start,sum);
+input clk,rst,start;
+output [31:0]sum;
+initial begin
+sum=0;
+end
+wire next_zero,LD_SUM,LD_NEXT,SUM_SEL,NEXT_SEL,A_SEL,DONE;
+//wire [31:0]outsum;
+fsm dut1(clk,rst,start,next_zero,LD_SUM,LD_NEXT,SUM_SEL,NEXT_SEL,A_SEL,DONE);
+datapath #(32)dut2(clk,rst,SUM_SEL,NEXT_SEL,A_SEL,LD_SUM,LD_NEXT,next_zero,sum);
+endmodule

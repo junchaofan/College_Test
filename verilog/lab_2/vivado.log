@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 12 18:41:29 2018
+# Process ID: 7792
+# Log file: E:/verilog/lab_2/vivado.log
+# Journal file: E:/verilog/lab_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/verilog/lab_2/lab_2.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Administrator/Desktop/verilog/lab_2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 751.344 ; gain = 192.926
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+[Tue Jun 12 18:42:20 2018] Launched impl_1...
+Run output will be captured here: E:/verilog/lab_2/lab_2.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 12 18:43:52 2018...

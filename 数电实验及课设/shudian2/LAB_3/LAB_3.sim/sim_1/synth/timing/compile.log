@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/shudian2/LAB_3/LAB_3.sim/sim_1/synth/timing/lab3_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab3
+INFO: [VRFC 10-311] analyzing module pipe3b
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/shudian2/lab3_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab3_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/shudian2/LAB_3/LAB_3.sim/sim_1/synth/timing/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/Administrator/Desktop/shudian2/LAB_3/LAB_3.sim/sim_1/synth/timing/glbl.v:6]

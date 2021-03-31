@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/shudian2/lab1_b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab1_b
+INFO: [VRFC 10-311] analyzing module T
+WARNING: [VRFC 10-1315] redeclaration of ansi port q is not allowed [E:/shudian2/lab1_b.v:20]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/shudian2/lab1_b_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab1_b_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/shudian2/LAB_1/LAB_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

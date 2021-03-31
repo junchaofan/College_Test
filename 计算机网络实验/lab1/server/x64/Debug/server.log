@@ -1,0 +1,7 @@
+﻿  server.cpp
+c:\users\fanjunchao\desktop\server\server.cpp(95): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+c:\users\fanjunchao\desktop\server\server.cpp(110): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\fanjunchao\desktop\server\server.cpp(111): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\fanjunchao\desktop\server\server.cpp(175): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\fanjunchao\desktop\server\server.cpp(185): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  server.vcxproj -> C:\Users\fanjunchao\Desktop\server\x64\Debug\server.exe

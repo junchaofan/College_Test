@@ -1,0 +1,7 @@
+Running: xsim.dir/lab7_behav/xsimk.exe -simmode gui -wdb lab7_behav.wdb -simrunnum 0 -socket 55943
+Design successfully loaded
+Design Loading Memory Usage: 20916 KB (Peak: 20916 KB)
+Design Loading CPU Usage: 202 ms
+Simulation completed
+Simulation Memory Usage: 21316 KB (Peak: 21316 KB)
+Simulation CPU Usage: 218 ms

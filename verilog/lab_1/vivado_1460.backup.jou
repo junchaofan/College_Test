@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu May 17 09:17:57 2018
+# Process ID: 1096
+# Log file: C:/Users/Administrator/Desktop/verilog/lab_1/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/verilog/lab_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/verilog/lab_1/lab_1.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -norecurse C:/Users/Administrator/Desktop/verilog/lab_2/lab2.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+remove_files C:/Users/Administrator/Desktop/verilog/lab_2/lab2.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -norecurse {{C:/Users/Administrator/Desktop/verilog/实验1 vivado设计流程/lab1.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{C:/Users/Administrator/Desktop/verilog/实验1 vivado设计流程/lab1_tb.v}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+add_files -fileset constrs_1 -norecurse {{C:/Users/Administrator/Desktop/verilog/实验1 vivado设计流程/lab1_nexys4.xdc}}
+launch_simulation
+source lab1_tb.tcl
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+remove_files -fileset constrs_1 C:/Users/Administrator/Desktop/verilog/verilog/lab1_nexys4.xdc
+remove_files C:/Users/Administrator/Desktop/verilog/verilog/lab1.v
+close_sim
+launch_simulation
+source lab1_tb.tcl
+synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/verilog/lab_1/lab_1.runs/impl_1/lab1.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/Administrator/Desktop/verilog/lab_1/lab_1.runs/impl_1/lab1.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+close_sim

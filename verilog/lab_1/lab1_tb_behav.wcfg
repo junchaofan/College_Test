@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="lab1_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="lab1_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="6" />
+   <wvobject db_ref_id="1" fp_name="/lab1_tb/switches" type="array">
+      <obj_property name="ElementShortName">switches[7:0]</obj_property>
+      <obj_property name="ObjectShortName">switches[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/lab1_tb/leds" type="array">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/lab1_tb/e_led" type="array">
+      <obj_property name="ElementShortName">e_led[7:0]</obj_property>
+      <obj_property name="ObjectShortName">e_led[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/lab1_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/lab1_tb/dut/swt" type="array">
+      <obj_property name="ElementShortName">swt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">swt[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/lab1_tb/dut/led" type="array">
+      <obj_property name="ElementShortName">led[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led[7:0]</obj_property>
+   </wvobject>
+</wave_config>

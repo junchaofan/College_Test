@@ -1,0 +1,89 @@
+DROP TABLE  IF EXISTS `T_HSXX`;
+DROP TABLE  IF EXISTS `T_JYXX`;
+DROP TABLE  IF EXISTS `T_GLXX`;
+DROP TABLE  IF EXISTS `T_DZXX`;
+DROP TABLE  IF EXISTS `T_TSXX`;
+
+CREATE TABLE `T_GLXX` (
+  `GLZH` char(6),
+  `GLMM` char(6) NOT NULL,
+  `GLDH` char(13) NOT NULL,
+  `GLMC` char(20) NOT NULL,
+  PRIMARY KEY  (`GLZH`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `T_DZXX` (
+  `DZZH` char(6),
+  `DZMM` char(6) NOT NULL,
+  `DZDH` char(13) NOT NULL,
+  `DZMC` char(20) NOT NULL,
+  PRIMARY KEY  (`DZZH`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `T_TSXX` (
+  `TSBH` char(6),
+  `TSMC` char(20) NOT NULL,
+  `TSZZ` char(20) NOT NULL,
+  `TSDJ` decimal(6,2) NOT NULL,
+  `SFJC` boolean NOT NULL,
+  PRIMARY KEY  (`TSBH`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `T_JYXX` (
+  `JYDH` char(6),
+  `TSBH` char(6) NOT NULL,
+  `DZZH` char(6) NOT NULL,
+  `JYSJ` timestamp NOT NULL,
+  `IFXJ` boolean NOT NULL,
+  PRIMARY KEY  (`JYDH`),
+  FOREIGN KEY(`TSBH`) references `T_TSXX`(`TSBH`),
+  FOREIGN KEY(`DZZH`) references `T_DZXX`(`DZZH`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `T_HSXX` (
+  `HSDH` char(6),
+  `JYDH` char(6) NOT NULL,
+  `HSSJ` timestamp NOT NULL,
+  `TSZT` boolean NOT NULL,
+  `IFFK` boolean NOT NULL,
+  `IFSH` boolean NOT NULL,
+  PRIMARY KEY  (`HSDH`),
+  FOREIGN KEY(`JYDH`) references `T_JYXX`(`JYDH`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `mysql`.`T_GLXX`(`GLZH`,`GLMM`,`GLDH`,`GLMC`) VALUES ('000001','666666','18388888888','王宝强');
+INSERT INTO `mysql`.`T_GLXX`(`GLZH`,`GLMM`,`GLDH`,`GLMC`) VALUES ('000002','666666','15966666666','贾乃亮');
+
+INSERT INTO `mysql`.`T_DZXX`(`DZZH`,`DZMM`,`DZDH`,`DZMC`) VALUES ('000001','123456','13888888888','李云龙');
+INSERT INTO `mysql`.`T_DZXX`(`DZZH`,`DZMM`,`DZDH`,`DZMC`) VALUES ('000002','123456','15977777777','樊俊超');
+INSERT INTO `mysql`.`T_DZXX`(`DZZH`,`DZMM`,`DZDH`,`DZMC`) VALUES ('000003','123456','13811111111','王亚宁');
+INSERT INTO `mysql`.`T_DZXX`(`DZZH`,`DZMM`,`DZDH`,`DZMC`) VALUES ('000004','123456','15922222222','周辰罡');
+INSERT INTO `mysql`.`T_DZXX`(`DZZH`,`DZMM`,`DZDH`,`DZMC`) VALUES ('000005','123456','13833333333','顾嘉伟');
+INSERT INTO `mysql`.`T_DZXX`(`DZZH`,`DZMM`,`DZDH`,`DZMC`) VALUES ('000006','123456','15944444444','陈志刚');
+INSERT INTO `mysql`.`T_DZXX`(`DZZH`,`DZMM`,`DZDH`,`DZMC`) VALUES ('000007','123456','13855555555','郦炀宁');
+INSERT INTO `mysql`.`T_DZXX`(`DZZH`,`DZMM`,`DZDH`,`DZMC`) VALUES ('000008','123456','15966666666','赖欣');
+
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000001','西游记','吴承恩',48.80,true);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000002','西游记','吴承恩',48.80,true);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000003','西游记','吴承恩',48.80,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000004','西游记','吴承恩',48.80,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000005','三国演义','罗贯中',66.60,true);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000006','三国演义','罗贯中',66.60,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000007','三国演义','罗贯中',66.60,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000008','三国演义','罗贯中',66.60,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000009','三国演义','罗贯中',66.60,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000010','数据库系统概论','萨师煊',39.60,true);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000011','数据库系统概论','萨师煊',39.60,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000012','数据库系统概论','萨师煊',39.60,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000013','数据库系统概论','萨师煊',39.60,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000014','编译原理','王生原',49.00,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000015','编译原理','王生原',49.00,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000016','编译原理','王生原',49.00,false);
+INSERT INTO `mysql`.`T_TSXX`(`TSBH`, `TSMC`, `TSZZ`, `TSDJ`, `SFJC`) VALUES ('000017','编译原理','王生原',49.00,false);
+
+INSERT INTO `mysql`.`T_JYXX`(`JYDH`, `TSBH`, `DZZH`, `JYSJ`, `IFXJ`) VALUES ('000001','000001','000001','2019-05-18 21:21:00',false);
+INSERT INTO `mysql`.`T_JYXX`(`JYDH`, `TSBH`, `DZZH`, `JYSJ`, `IFXJ`) VALUES ('000002','000002','000002','2019-05-19 12:21:00',false);
+INSERT INTO `mysql`.`T_JYXX`(`JYDH`, `TSBH`, `DZZH`, `JYSJ`, `IFXJ`) VALUES ('000003','000005','000001','2019-05-18 21:22:00',false);
+INSERT INTO `mysql`.`T_JYXX`(`JYDH`, `TSBH`, `DZZH`, `JYSJ`, `IFXJ`) VALUES ('000004','000010','000001','2019-05-18 21:23:00',false);
+
+INSERT INTO `mysql`.`T_HSXX`(`HSDH`, `JYDH`, `HSSJ`, `TSZT`, `IFFK`, `IFSH`) VALUES ('000001','000001','2019-06-16 12:21:00',false,false,false);

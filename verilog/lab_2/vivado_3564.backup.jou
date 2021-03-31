@@ -1,0 +1,72 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu May 17 08:55:25 2018
+# Process ID: 3176
+# Log file: C:/Users/Administrator/Desktop/verilog/lab_2/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/verilog/lab_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/verilog/lab_2/lab_2.xpr
+launch_simulation
+update_compile_order -fileset sim_1
+remove_files -fileset sim_1 C:/Users/Administrator/Desktop/verilog/lab_2/lab2_tb.v
+update_compile_order -fileset sim_1
+add_files -norecurse {C:/Users/Administrator/Desktop/verilog/lab_2/lab2_tb.v C:/Users/Administrator/Desktop/verilog/lab_2/lab2.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+remove_files C:/Users/Administrator/Desktop/verilog/lab_2/lab2_tb.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+source lab2.tcl
+launch_runs synth_1
+wait_on_run synth_1
+close_sim
+launch_simulation
+source lab2.tcl
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_runs impl_1
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+source main.tcl
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210274592456A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210274592456A]
+open_hw_target
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+synth_design -rtl -name rtl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+close_sim
+close_sim

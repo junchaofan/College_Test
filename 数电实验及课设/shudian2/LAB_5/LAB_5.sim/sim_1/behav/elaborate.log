@@ -1,0 +1,19 @@
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 50fded62b3024a6bbc464c441edb6738 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot lab5tb_behav xil_defaultlib.lab5tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "E:/shudian2/lab5.v" Line 3. Module lab5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "E:/shudian2/LAB_5/LAB_5.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "E:/shudian2/lab5.v" Line 3. Module lab5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "E:/shudian2/LAB_5/LAB_5.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter(min=4'b010,max=4'b1001)
+Compiling module xil_defaultlib.lab5
+Compiling module xil_defaultlib.lab5tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot lab5tb_behav

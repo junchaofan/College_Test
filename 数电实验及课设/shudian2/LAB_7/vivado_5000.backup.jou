@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 12 15:15:03 2018
+# Process ID: 1328
+# Log file: C:/Users/fanjunchao/Desktop/数电实验二/LAB_7/vivado.log
+# Journal file: C:/Users/fanjunchao/Desktop/数电实验二/LAB_7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/fanjunchao/Desktop/数电实验二/LAB_7/LAB_7.xpr
+add_files -norecurse C:/Users/fanjunchao/Desktop/数电实验二/lab7.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/fanjunchao/Desktop/数电实验二/lab7tb.v
+update_compile_order -fileset sim_1
+add_files -fileset constrs_1 -norecurse C:/Users/fanjunchao/Desktop/数电实验二/lab7ys.xdc
+launch_simulation
+launch_simulation
+source lab7.tcl
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source lab7tb.tcl
+close_sim
+close_sim

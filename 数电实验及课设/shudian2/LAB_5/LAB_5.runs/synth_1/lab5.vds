@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 19 14:39:22 2018
+# Process ID: 5900
+# Log file: C:/Users/Administrator/Desktop/shudian2/LAB_5/LAB_5.runs/synth_1/lab5.vds
+# Journal file: C:/Users/Administrator/Desktop/shudian2/LAB_5/LAB_5.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source lab5.tcl -notrace
+Command: synth_design -top lab5 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 263.652 ; gain = 91.672
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'lab5' [C:/Users/Administrator/Desktop/shudian2/lab5.v:3]
+ERROR: [Synth 8-439] module 'counter' not found [C:/Users/Administrator/Desktop/shudian2/lab5.v:12]
+	Parameter positional_param_0 bound to: 4'b0010 
+	Parameter positional_param_1 bound to: 4'b1001 
+ERROR: [Synth 8-285] failed synthesizing module 'lab5' [C:/Users/Administrator/Desktop/shudian2/lab5.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 297.930 ; gain = 125.949
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 19 14:39:26 2018...

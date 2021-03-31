@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 12 21:19:03 2018
+# Process ID: 2016
+# Log file: C:/Users/Administrator/Desktop/数电实验二/LAB_2/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/数电实验二/LAB_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/数电实验二/LAB_2/LAB_2.xpr
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+synth_design -rtl -name rtl_1

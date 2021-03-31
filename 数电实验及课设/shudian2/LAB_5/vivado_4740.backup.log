@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed Jun 13 11:16:28 2018
+# Process ID: 3144
+# Log file: C:/Users/Administrator/Desktop/shudian2/LAB_5/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/shudian2/LAB_5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/shudian2/LAB_5/LAB_5.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/fanjunchao/Desktop/shudian2/LAB_5' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/Administrator/Desktop/shudian2/mode16.v', nor could it be found using path 'C:/Users/fanjunchao/Desktop/shudian2/mode16.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'set_property' was cancelled
+INFO: [Common 17-344] 'set_property' was cancelled
+INFO: [Common 17-344] 'open_project' was cancelled
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 11:16:43 2018...

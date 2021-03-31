@@ -1,0 +1,68 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Tue Jun 19 15:50:55 2018
+| Host         : 804-036 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file E4_1_TEST_control_sets_placed.rpt
+| Design       : E4_1_TEST
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    15 |
+| Minimum Number of register sites lost to control set restrictions |    98 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |               9 |            9 |
+| No           | Yes                   | No                     |              36 |           12 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+---------------+-----------------------------------+------------------+----------------+
+|            Clock Signal            | Enable Signal |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++------------------------------------+---------------+-----------------------------------+------------------+----------------+
+|  cp_IBUF_BUFG                      |               |                                   |                1 |              1 |
+|  counter_16/out_reg[3]_LDC_i_1_n_0 |               | counter_16/out_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  counter_16/out_reg[2]_LDC_i_1_n_0 |               | counter_16/out_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  counter_16/out_reg[1]_LDC_i_1_n_0 |               | counter_16/out_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  counter_16/out_reg[0]_LDC_i_1_n_0 |               | counter_16/out_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  D1/clk_N                          |               | counter_16/qc_i_2_n_0             |                1 |              1 |
+|  D1/clk_N                          |               | counter_16/out_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  D1/clk_N                          |               | counter_16/out_reg[3]_LDC_i_1_n_0 |                1 |              1 |
+|  D1/clk_N                          |               | counter_16/out_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  D1/clk_N                          |               | counter_16/out_reg[2]_LDC_i_1_n_0 |                1 |              1 |
+|  D1/clk_N                          |               | counter_16/out_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  D1/clk_N                          |               | counter_16/out_reg[1]_LDC_i_1_n_0 |                1 |              1 |
+|  D1/clk_N                          |               | counter_16/out_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  D1/clk_N                          |               | counter_16/out_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  cp_IBUF_BUFG                      |               | D1/clear                          |                8 |             32 |
++------------------------------------+---------------+-----------------------------------+------------------+----------------+
+
+

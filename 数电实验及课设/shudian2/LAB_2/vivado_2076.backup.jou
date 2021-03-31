@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Jun 14 20:19:24 2018
+# Process ID: 3716
+# Log file: C:/Users/Administrator/Desktop/shudian2/LAB_2/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/shudian2/LAB_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/shudian2/LAB_2/LAB_2.xpr
+launch_simulation
+source lab2_tb.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_project C:/Users/Administrator/Desktop/shudian2/LAB_1/LAB_1.xpr
+close_sim
+current_project LAB_2
+close_project
+launch_simulation
+open_wave_config C:/Users/Administrator/Desktop/shudian2/LAB_1/lab1_b_tb_behav.wcfg
+source lab1_b_tb.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+close_sim

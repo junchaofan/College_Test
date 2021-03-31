@@ -1,0 +1,75 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 12 21:19:03 2018
+# Process ID: 2016
+# Log file: C:/Users/Administrator/Desktop/数电实验二/LAB_2/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/数电实验二/LAB_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/数电实验二/LAB_2/LAB_2.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/Administrator/Desktop/数电实验二/数电实验二/lab2_tb.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+reset_run synth_1
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Administrator/Desktop/数电实验二/lab2.v" into library work [C:/Users/Administrator/Desktop/数电实验二/lab2.v:1]
+[Tue Jun 12 21:20:26 2018] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/数电实验二/LAB_2/LAB_2.runs/synth_1/runme.log
+launch_runs impl_1
+[Tue Jun 12 21:20:53 2018] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/数电实验二/LAB_2/LAB_2.runs/impl_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: lab2
+WARNING: [Synth 8-2611] redeclaration of ansi port z is not allowed [C:/Users/Administrator/Desktop/数电实验二/lab2.v:8]
+WARNING: [Synth 8-2611] redeclaration of ansi port q1 is not allowed [C:/Users/Administrator/Desktop/数电实验二/lab2.v:8]
+WARNING: [Synth 8-2611] redeclaration of ansi port q2 is not allowed [C:/Users/Administrator/Desktop/数电实验二/lab2.v:8]
+WARNING: [Synth 8-2611] redeclaration of ansi port q3 is not allowed [C:/Users/Administrator/Desktop/数电实验二/lab2.v:8]
+WARNING: [Synth 8-2611] redeclaration of ansi port q4 is not allowed [C:/Users/Administrator/Desktop/数电实验二/lab2.v:8]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:40 ; elapsed = 00:02:23 . Memory (MB): peak = 771.098 ; gain = 598.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'lab2' [C:/Users/Administrator/Desktop/数电实验二/lab2.v:3]
+INFO: [Synth 8-638] synthesizing module 'choose' [C:/Users/Administrator/Desktop/数电实验二/lab2.v:28]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/数电实验二/lab2.v:35]
+INFO: [Synth 8-256] done synthesizing module 'choose' (1#1) [C:/Users/Administrator/Desktop/数电实验二/lab2.v:28]
+INFO: [Synth 8-256] done synthesizing module 'lab2' (2#1) [C:/Users/Administrator/Desktop/数电实验二/lab2.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:02:23 . Memory (MB): peak = 796.121 ; gain = 623.977
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:41 ; elapsed = 00:02:23 . Memory (MB): peak = 796.121 ; gain = 623.977
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Administrator/Desktop/数电实验二/lab2ys.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/数电实验二/lab2ys.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-141] Inserted 5 OBUFs to IO ports without IO buffers.
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:50 ; elapsed = 00:02:29 . Memory (MB): peak = 1092.156 ; gain = 920.012
+9 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1092.156 ; gain = 345.758
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 12 21:21:56 2018...

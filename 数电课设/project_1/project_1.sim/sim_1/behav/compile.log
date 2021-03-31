@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/大三数电课设/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/大三数电课设/show.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module show
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/大三数电课设/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/大三数电课设/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/大三数电课设/maintb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module maintb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

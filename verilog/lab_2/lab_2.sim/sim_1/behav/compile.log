@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/verilog/lab_2/lab2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main
+INFO: [VRFC 10-311] analyzing module _7Seg_Driver_Direct
+INFO: [VRFC 10-311] analyzing module _7Seg_Driver_Decode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/verilog/lab_2/lab_2.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

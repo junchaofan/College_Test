@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 12 19:37:58 2018
+# Process ID: 4448
+# Log file: C:/Users/Administrator/Desktop/数电实验二/LAB_1/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/数电实验二/LAB_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.xpr
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/Users/Administrator/Desktop/数电实验二/lab2ys.xdc
+remove_files -fileset constrs_1 C:/Users/Administrator/Desktop/数电实验二/lab2ys.xdc
+add_files -fileset constrs_1 -norecurse C:/Users/Administrator/Desktop/数电实验二/lab1ys.xdc
+launch_runs synth_1
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_simulation
+update_compile_order -fileset sources_1
+remove_files -fileset constrs_1 C:/Users/Administrator/Desktop/数电实验二/lab1ys.xdc
+launch_simulation
+open_wave_config C:/Users/Administrator/Desktop/数电实验二/LAB_1/lab1_b_tb_behav.wcfg
+source lab1_b_tb.tcl
+close_sim

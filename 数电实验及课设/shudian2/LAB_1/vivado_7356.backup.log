@@ -1,0 +1,132 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 12 19:37:58 2018
+# Process ID: 4448
+# Log file: C:/Users/Administrator/Desktop/数电实验二/LAB_1/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/数电实验二/LAB_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/fanjunchao/Desktop/数电实验二/LAB_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 701.020 ; gain = 154.180
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/Users/Administrator/Desktop/数电实验二/lab2ys.xdc
+remove_files -fileset constrs_1 C:/Users/Administrator/Desktop/数电实验二/lab2ys.xdc
+add_files -fileset constrs_1 -norecurse C:/Users/Administrator/Desktop/数电实验二/lab1ys.xdc
+launch_runs synth_1
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/Administrator/Desktop/数电实验二/lab1_b.v" into library work [C:/Users/Administrator/Desktop/数电实验二/lab1_b.v:1]
+[Tue Jun 12 19:41:27 2018] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Administrator/Desktop/数电实验二/lab1ys.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/数电实验二/lab1ys.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1044.035 ; gain = 301.859
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'lab1_b_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj lab1_b_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/数电实验二/lab1_b_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab1_b_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 897444f88f88476b8f5c0894c4ae3450 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot lab1_b_tb_behav xil_defaultlib.lab1_b_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <lab1_b> not found while processing module instance <test> [C:/Users/Administrator/Desktop/数电实验二/lab1_b_tb.v:7]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav/elaborate.log' file for more information.
+update_compile_order -fileset sources_1
+remove_files -fileset constrs_1 C:/Users/Administrator/Desktop/数电实验二/lab1ys.xdc
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'lab1_b_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav'
+"xvlog -m64 --relax -prj lab1_b_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/数电实验二/lab1_b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab1_b
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/数电实验二/lab1_b_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab1_b_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav'
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 897444f88f88476b8f5c0894c4ae3450 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot lab1_b_tb_behav xil_defaultlib.lab1_b_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.lab1_b
+Compiling module xil_defaultlib.lab1_b_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot lab1_b_tb_behav
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav/xsim.dir/lab1_b_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav/xsim.dir/lab1_b_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Jun 12 19:45:06 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2015.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Jun 12 19:45:06 2018...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1453.969 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/Desktop/数电实验二/LAB_1/LAB_1.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "lab1_b_tb_behav -key {Behavioral:sim_1:Functional:lab1_b_tb} -tclbatch {lab1_b_tb.tcl} -view {C:/Users/Administrator/Desktop/数电实验二/LAB_1/lab1_b_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Administrator/Desktop/数电实验二/LAB_1/lab1_b_tb_behav.wcfg
+source lab1_b_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'lab1_b_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1453.969 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 12 19:53:28 2018...

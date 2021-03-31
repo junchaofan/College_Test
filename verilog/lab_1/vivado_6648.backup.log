@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed Jun 27 10:48:11 2018
+# Process ID: 1460
+# Log file: E:/verilog/lab_1/vivado.log
+# Journal file: E:/verilog/lab_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/verilog/lab_1/lab_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Administrator/Desktop/verilog/lab_1' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'E:/verilog/verilog/lab1_tb.v', nor could it be found using path 'C:/Users/Administrator/Desktop/verilog/verilog/lab1_tb.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 674.348 ; gain = 126.535
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 27 10:50:00 2018...
